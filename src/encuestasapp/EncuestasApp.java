@@ -35,6 +35,10 @@ public class EncuestasApp {
             System.out.println(ex.toString());
         }
         
+        
+        System.out.println("Login? "+udao.login("root", "toor"));
+        System.out.println("Login? "+udao.login("jesus", "dios1234"));
+        
     }
     
 }

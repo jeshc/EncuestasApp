@@ -58,7 +58,7 @@ public class BaseDeDatos {
     }
 
     public Connection getConexion() {
-        System.out.println("regresando conexion");
+        //System.out.println("regresando conexion");
         return conexion;
     }
 
