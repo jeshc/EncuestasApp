@@ -4,6 +4,12 @@
  */
 package encuestasapp;
 
+import ico.fes.bd.UsuarioDAO;
+import ico.fes.dp.Usuario;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author unam
@@ -15,6 +21,20 @@ public class EncuestasApp {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        UsuarioDAO udao= new UsuarioDAO();
+        try {
+            System.out.println("Creada?:" + udao.createTable("na") );
+        } catch (SQLException ex) {
+            System.out.println(ex.toString());
+        }
+        
+        Usuario userIU=new Usuario(0, "JEsus", "HC", "jesus", "dios1234");
+        try {
+            udao.insert(userIU);
+        } catch (SQLException ex) {
+            System.out.println(ex.toString());
+        }
+        
     }
     
 }
